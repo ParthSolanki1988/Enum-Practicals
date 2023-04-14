@@ -1,20 +1,17 @@
 import com.beveragemachine.BeverageType;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
+  //ordinal() print index
+    //BeverageType.values() print Enum object value
 
-    System.out.println("Enter name of beverage (like ==> Tea , Latte , Cappuccino , Mocha ) : ");
-    String userInput = scanner.next();
-
-    BeverageType beverageType = BeverageType.valueOf(userInput);
-    int index = beverageType.ordinal();
-    System.out.println("You have drunk "  + beverageType + " this morning!");
-    System.out.println(beverageType +" index is : " + index);
-
+    for (BeverageType beverages : BeverageType.values()) {
+      System.out.println("Index : " + beverages.ordinal() + "  | Beverage : " +beverages);
+    }
 
 
   }
